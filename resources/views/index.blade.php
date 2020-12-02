@@ -68,8 +68,8 @@
             <div class="game mt-8">
                 <div class="relative inline-block">
                     <a href="#">
-                        <img src="/images/animalcrossing.jpg" alt="game cover" class="hover:opacity-75 transition ease-in-out
-                        duration-150">
+                        <img src="/images/animalcrossing.jpg" alt="game cover" class="hover:opacity-75 transition
+                        ease-in-out duration-150">
                     </a>
                     <div class="absolute bottom-0 right-0 w-16 h-16 bg-gray-800 rounded-full"
                          style="right: -20px; bottom: -20px;">
@@ -113,8 +113,8 @@
             <div class="game mt-8">
                 <div class="relative inline-block">
                     <a href="#">
-                        <img src="/images/cyberpunk.jpg" alt="game cover" class="hover:opacity-75 transition ease-in-out
-                        duration-150">
+                        <img src="/images/cyberpunk.jpg" alt="game cover" class="hover:opacity-75 transition
+                        ease-in-out duration-150">
                     </a>
                     <div class="absolute bottom-0 right-0 w-16 h-16 bg-gray-800 rounded-full"
                          style="right: -20px; bottom: -20px;">
@@ -128,8 +128,8 @@
             <div class="game mt-8">
                 <div class="relative inline-block">
                     <a href="#">
-                        <img src="/images/desperados.jpg" alt="game cover" class="hover:opacity-75 transition ease-in-out
-                        duration-150">
+                        <img src="/images/desperados.jpg" alt="game cover" class="hover:opacity-75 transition
+                        ease-in-out duration-150">
                     </a>
                     <div class="absolute bottom-0 right-0 w-16 h-16 bg-gray-800 rounded-full"
                          style="right: -20px; bottom: -20px;">
@@ -193,8 +193,8 @@
                     <div class="game bg-gray-800 rounded-lg shadow-md flex px-6 py-6">
                         <div class="relative flex-none">
                             <a href="#">
-                                <img src="/images/avengers.jpg" alt="game cover" class="w-48 hover:opacity-75 transition ease-in-out
-                        duration-150">
+                                <img src="/images/avengers.jpg" alt="game cover" class="w-48 hover:opacity-75 transition
+                                ease-in-out duration-150">
                             </a>
                             <div class="absolute bottom-0 right-0 w-16 h-16 bg-gray-900 rounded-full"
                                  style="right: -20px; bottom: -20px;">
@@ -217,8 +217,8 @@
                     <div class="game bg-gray-800 rounded-lg shadow-md flex px-6 py-6">
                         <div class="relative flex-none">
                             <a href="#">
-                                <img src="/images/alyx.jpg" alt="game cover" class="w-48 hover:opacity-75 transition ease-in-out
-                        duration-150">
+                                <img src="/images/alyx.jpg" alt="game cover" class="w-48 hover:opacity-75 transition
+                                ease-in-out duration-150">
                             </a>
                             <div class="absolute bottom-0 right-0 w-16 h-16 bg-gray-900 rounded-full"
                                  style="right: -20px; bottom: -20px;">
@@ -241,8 +241,8 @@
                     <div class="game bg-gray-800 rounded-lg shadow-md flex px-6 py-6">
                         <div class="relative flex-none">
                             <a href="#">
-                                <img src="/images/cyberpunk.jpg" alt="game cover" class="w-48 hover:opacity-75 transition ease-in-out
-                        duration-150">
+                                <img src="/images/cyberpunk.jpg" alt="game cover" class="w-48 hover:opacity-75
+                                transition ease-in-out duration-150">
                             </a>
                             <div class="absolute bottom-0 right-0 w-16 h-16 bg-gray-900 rounded-full"
                                  style="right: -20px; bottom: -20px;">
@@ -269,8 +269,8 @@
                 <div class="most-anticipated-container space-y-10 mt-8">
                     <div class="game flex">
                         <a href="#">
-                            <img src="/images/cyberpunk.jpg" alt="game cover" class="w-20 hover:opacity-75 transition ease-in-out
-                        duration-150">
+                            <img src="/images/cyberpunk.jpg" alt="game cover" class="w-20 hover:opacity-75 transition
+                            ease-in-out duration-150">
                         </a>
                         <div class="ml-4">
                             <a href="#" class="hover:text-gray-300">Cuberpunk 2077</a>
@@ -279,8 +279,8 @@
                     </div>
                     <div class="game flex">
                         <a href="#">
-                            <img src="/images/avengers.jpg" alt="game cover" class="w-20 hover:opacity-75 transition ease-in-out
-                        duration-150">
+                            <img src="/images/avengers.jpg" alt="game cover" class="w-20 hover:opacity-75 transition
+                            ease-in-out duration-150">
                         </a>
                         <div class="ml-4">
                             <a href="#" class="hover:text-gray-300">Marvel's Avengers</a>
@@ -289,8 +289,8 @@
                     </div>
                     <div class="game flex">
                         <a href="#">
-                            <img src="/images/alyx.jpg" alt="game cover" class="w-20 hover:opacity-75 transition ease-in-out
-                        duration-150">
+                            <img src="/images/alyx.jpg" alt="game cover" class="w-20 hover:opacity-75 transition
+                            ease-in-out duration-150">
                         </a>
                         <div class="ml-4">
                             <a href="#" class="hover:text-gray-300">Half Life: Alyx</a>
@@ -299,8 +299,8 @@
                     </div>
                     <div class="game flex">
                         <a href="#">
-                            <img src="/images/tlou2.jpg" alt="game cover" class="w-20 hover:opacity-75 transition ease-in-out
-                        duration-150">
+                            <img src="/images/tlou2.jpg" alt="game cover" class="w-20 hover:opacity-75 transition
+                            ease-in-out duration-150">
                         </a>
                         <div class="ml-4">
                             <a href="#" class="hover:text-gray-300">The Last of Us Part II</a>
@@ -312,28 +312,32 @@
                 <h2 class="text-blue-500 uppercase tracking-wide font-semibold mt-12">Coming Soon</h2>
                 <div class="most-anticipated-container space-y-10 mt-8">
                     <div class="game flex">
-                        <a href="#"><img src="/images/cyberpunk.jpg" alt="game cover" class="w-16 hover:opacity-75 transition ease-in-out duration-150"></a>
+                        <a href="#"><img src="/images/cyberpunk.jpg" alt="game cover" class="w-16 hover:opacity-75
+                        transition ease-in-out duration-150"></a>
                         <div class="ml-4">
                             <a href="#" class="hover:text-gray-300">Cyberpunk 2077</a>
                             <div class="text-gray-400 text-sm mt-1">Sept 16, 2020</div>
                         </div>
                     </div>
                     <div class="game flex">
-                        <a href="#"><img src="/images/avengers.jpg" alt="game cover" class="w-16 hover:opacity-75 transition ease-in-out duration-150"></a>
+                        <a href="#"><img src="/images/avengers.jpg" alt="game cover" class="w-16 hover:opacity-75
+                        transition ease-in-out duration-150"></a>
                         <div class="ml-4">
                             <a href="#" class="hover:text-gray-300">Marvel's Avengers</a>
                             <div class="text-gray-400 text-sm mt-1">Sept 3, 2020</div>
                         </div>
                     </div>
                     <div class="game flex">
-                        <a href="#"><img src="/images/ghost.jpg" alt="game cover" class="w-16 hover:opacity-75 transition ease-in-out duration-150"></a>
+                        <a href="#"><img src="/images/ghost.jpg" alt="game cover" class="w-16 hover:opacity-75
+                        transition ease-in-out duration-150"></a>
                         <div class="ml-4">
                             <a href="#" class="hover:text-gray-300">Ghost of Tsushima</a>
                             <div class="text-gray-400 text-sm mt-1">July 17, 2020</div>
                         </div>
                     </div>
                     <div class="game flex">
-                        <a href="#"><img src="/images/tlou2.jpg" alt="game cover" class="w-16 hover:opacity-75 transition ease-in-out duration-150"></a>
+                        <a href="#"><img src="/images/tlou2.jpg" alt="game cover" class="w-16 hover:opacity-75
+                        transition ease-in-out duration-150"></a>
                         <div class="ml-4">
                             <a href="#" class="hover:text-gray-300">The Last of Us Part II</a>
                             <div class="text-gray-400 text-sm mt-1">June 19, 2020</div>
