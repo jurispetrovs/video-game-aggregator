@@ -3,7 +3,8 @@
 @section('content')
     <div class="container mx-auto px-4">
         <h2 class="text-blue-500 uppercase tracking-wide font-semibold">Popular Games</h2>
-        <div class="popular-games text-sm grid grid-cols-6 gap-12 border-b border-gray-800 pb-16">
+        <div class="popular-games text-sm grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-6 gap-12
+        border-b border-gray-800 pb-16">
             <div class="game mt-8">
                 <div class="relative inline-block">
                     <a href="#">
@@ -185,8 +186,8 @@
                 <div class="text-gray-400 mt-1">PC, PS4, Xbox One, Stadia</div>
             </div>
         </div> <!-- end popular games -->
-        <div class="flex my-10">
-            <div class="recently-reviewed w-3/4 mr-32">
+        <div class="flex flex-col lg:flex-row my-10">
+            <div class="recently-reviewed w-full lg:w-3/4 mr-0 lg:mr-32">
                 <h2 class="text-blue-500 uppercase tracking-wide font-semibold">Recently Reviewed</h2>
                 <div class="recently-reviewed-container space-y-12 mt-8">
                     <div class="game bg-gray-800 rounded-lg shadow-md flex px-6 py-6">
@@ -204,7 +205,7 @@
                             <a href="#" class="block text-lg font-semibold leading-tight hover:text-gray-400 mt-4">
                                 Marvel's Avengers</a>
                             <div class="text-gray-400 mt-1">PC, PS4, Xbox One, Stadia</div>
-                            <p class="mt-6 text-gray-400">
+                            <p class="mt-6 text-gray-400 hidden lg:block">
                                 Marvel’s Avengers is an epic, third-person, action-adventure game that combines an
                                 original, cinematic story with single-player and co-operative gameplay. Assemble into
                                 a team of up to four players online, master extraordinary abilities, customize a
@@ -228,7 +229,7 @@
                             <a href="#" class="block text-lg font-semibold leading-tight hover:text-gray-400 mt-4">
                                 Half Life: Alyx</a>
                             <div class="text-gray-400 mt-1">PC</div>
-                            <p class="mt-6 text-gray-400">
+                            <p class="mt-6 text-gray-400 hidden lg:block">
                                 Half-Life: Alyx is a 2020 virtual reality (VR) first-person shooter developed and
                                 published by Valve. Set between the events of Half-Life (1998) and Half-Life 2 (2004),
                                 players control Alyx Vance on a mission to seize a superweapon belonging to the alien
@@ -252,7 +253,7 @@
                             <a href="#" class="block text-lg font-semibold leading-tight hover:text-gray-400 mt-4">
                                 Cyberpunk 2077</a>
                             <div class="text-gray-400 mt-1">PC, PS4, Xbox One</div>
-                            <p class="mt-6 text-gray-400">
+                            <p class="mt-6 text-gray-400 hidden lg:block">
                                 Cyberpunk 2077 is an upcoming action role-playing video game developed and published
                                 by CD Projekt. Adapted from the Cyberpunk franchise, the story takes place in dystopian
                                 Night City, an open world with six distinct regions. Players assume the first-person
@@ -263,7 +264,7 @@
                     </div>
                 </div>
             </div>
-            <div class="most-anticipated w-1/4">
+            <div class="most-anticipated lg:w-1/4 mt-12 lg:mt-0">
                 <h2 class="text-blue-500 uppercase tracking-wide font-semibold">Most Anticipated</h2>
                 <div class="most-anticipated-container space-y-10 mt-8">
                     <div class="game flex">
