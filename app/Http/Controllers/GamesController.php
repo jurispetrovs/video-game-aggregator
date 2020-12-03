@@ -16,33 +16,6 @@ class GamesController extends Controller
      */
     public function index()
     {
-        // For Multi Query
-        // $client = new \GuzzleHttp\Client(['base_uri' => 'https://api-v3.igdb.com/']);
-
-        // $response = $client->request('POST', 'multiquery', [
-        //     'headers' => [
-        //         'user-key' => env('IGDB_KEY'),
-        //     ],
-        //     'body' => '
-        //         query games "Playstation" {
-        //             fields name, popularity, platforms.name, first_release_date;
-        //             where platforms = {6,48,130,49};
-        //             sort popularity desc;
-        //             limit 2;
-        //         };
-
-        //         query games "Switch" {
-        //             fields name, popularity, platforms.name, first_release_date;
-        //             where platforms = {6,48,130,49};
-        //             sort popularity desc;
-        //             limit 6;
-        //         };
-        //         '
-        // ]);
-
-        // $body = $response->getBody();
-        // dd(json_decode($body));
-
         return view('index');
     }
 
@@ -75,14 +48,13 @@ class GamesController extends Controller
      */
     public function show($slug)
     {
-        $game = Http::withHeaders(config('services.igdb'))
-            ->withOptions([
-                'body' => "
-                    fields name, cover.url, first_release_date, popularity, platforms.abbreviation, rating,
+        $game = Http::withHeaders(config('services.igdb.headers'))
+            ->withBody(
+                "fields name, cover.url, first_release_date, platforms.abbreviation, rating,
                     slug, involved_companies.company.name, genres.name, aggregated_rating, summary, websites.*, videos.*, screenshots.*, similar_games.cover.url, similar_games.name, similar_games.rating,similar_games.platforms.abbreviation, similar_games.slug;
                     where slug=\"{$slug}\";
-                "
-            ])->get('https://api-v3.igdb.com/games')
+                ", "text/plain"
+            )->post(config('services.igdb.endpoint'))
             ->json();
 
         abort_if(!$game, 404);
@@ -95,20 +67,20 @@ class GamesController extends Controller
     private function formatGameForView($game)
     {
         return collect($game)->merge([
-            'coverImageUrl' => Str::replaceFirst('thumb', 'cover_big', $game['cover']['url']),
-            'genres' => collect($game['genres'])->pluck('name')->implode(', '),
-            'involvedCompanies' => $game['involved_companies'][0]['company']['name'],
-            'platforms' => collect($game['platforms'])->pluck('abbreviation')->implode(', '),
+            'coverImageUrl' => array_key_exists('cover', $game) ? Str::replaceFirst('thumb', 'cover_big', $game['cover']['url']): null,
+            'genres' => array_key_exists('genres', $game) ? collect($game['genres'])->pluck('name')->implode(', ') : null,
+            'involvedCompanies' => array_key_exists('involved_companies', $game) ? $game['involved_companies'][0]['company']['name']: null,
+            'platforms' => array_key_exists('platforms', $game) ? collect($game['platforms'])->pluck('abbreviation')->implode(', ') : null,
             'memberRating' => array_key_exists('rating', $game) ? round($game['rating']) : '0',
             'criticRating' => array_key_exists('aggregated_rating', $game) ? round($game['aggregated_rating']) : '0',
-            'trailer' => 'https://youtube.com/embed/'.$game['videos'][0]['video_id'],
-            'screenshots' => collect($game['screenshots'])->map(function ($screenshot) {
+            'trailer' => array_key_exists('videos', $game) ? 'https://youtube.com/embed/'.$game['videos'][0]['video_id'] : null,
+            'screenshots' => array_key_exists('screenshots', $game) ? collect($game['screenshots'])->map(function ($screenshot) {
                 return [
                     'big' => Str::replaceFirst('thumb', 'screenshot_big', $screenshot['url']),
                     'huge' => Str::replaceFirst('thumb', 'screenshot_huge', $screenshot['url']),
                 ];
-            })->take(9),
-            'similarGames' => collect($game['similar_games'])->map(function ($game) {
+            })->take(9) : null,
+            'similarGames' => array_key_exists('similar_games', $game) ? collect($game['similar_games'])->map(function ($game) {
                 return collect($game)->merge([
                     'coverImageUrl' => array_key_exists('cover', $game)
                         ? Str::replaceFirst('thumb', 'cover_big', $game['cover']['url'])
@@ -118,7 +90,7 @@ class GamesController extends Controller
                         ? collect($game['platforms'])->pluck('abbreviation')->implode(', ')
                         : null,
                 ]);
-            })->take(6),
+            })->take(6) : null,
             'social' => [
                 'website' => collect($game['websites'])->first(),
                 'facebook' => collect($game['websites'])->filter(function ($website) {

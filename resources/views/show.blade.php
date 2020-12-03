@@ -4,7 +4,11 @@
     <div class="container mx-auto px-4">
         <div class="game-details border-b border-gray-800 pb-12 flex flex-col lg:flex-row">
             <div class="flex-none">
-                <img src="{{ $game['coverImageUrl'] }}" alt="cover">
+                @if($game['coverImageUrl'])
+                    <img src="{{ $game['coverImageUrl'] }}" alt="cover">
+                @else
+                    <div class="bg-gray-800 flex-none" style="width: 264px; height: 352px"></div>
+                @endif
             </div>
             <div class="lg:ml-12 xl:mr-64">
                 <h2 class="font-semibold text-4xl leading-tight mt-1">{{ $game['name'] }}</h2>

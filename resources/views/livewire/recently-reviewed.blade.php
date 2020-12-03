@@ -13,7 +13,7 @@
                     {{ $game['platforms'] }}
                 </div>
                 <p class="mt-6 text-gray-400 hidden lg:block">
-                    {{ $game['summary'] }}
+                    {{ substr($game['summary'], 0, 500) . '...' }}
                 </p>
             </div>
         </div> <!-- end game -->
